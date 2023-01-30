@@ -7,3 +7,5 @@ Crud Pessoa
 - Endereço -> Logradouro, Cidade, Bairro
 
 
+# Video Funcionando
+https://youtu.be/posPj1ZUXmc
