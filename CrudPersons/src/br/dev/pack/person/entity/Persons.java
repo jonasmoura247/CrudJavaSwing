@@ -222,7 +222,7 @@ public class Persons extends javax.swing.JFrame {
         String district = txtDistrict.getText();
         String city = txtCity.getText();
 
-        Person p = new Person(name, phone, sex, street, district, city);
+        Person p = new Person(name, phone, sex, street,city, district);
 
         return p;
     }
