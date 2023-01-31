@@ -5,14 +5,25 @@ public class Person {
     private String name;
     private String phone;
     private String sex;
+    private String mother;
+    private String father;
+    private String dateB;
+    private String conv;
+    private String cep;
     private String street;
     private String district;
     private String city;
+    
 
-    public Person(String name, String phone, String sex, String street, String city, String district) {
+    public Person(String name, String phone, String sex, String mother, String father, String dateB, String conv, String cep, String street, String city, String district) {
         this.name = name;
         this.phone = phone;
         this.sex = sex;
+        this.mother = mother;
+        this.father = father;
+        this.dateB = dateB;
+        this.conv = conv;
+        this.cep = cep;
         this.street = street;
         this.city = city;
         this.district = district;
@@ -48,6 +59,46 @@ public class Person {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getMother() {
+        return mother;
+    }
+
+    public void setMother(String mother) {
+        this.mother = mother;
+    }
+
+    public String getFather() {
+        return father;
+    }
+
+    public String getDateB() {
+        return dateB;
+    }
+
+    public void setDateB(String dateB) {
+        this.dateB = dateB;
+    }
+
+    public String getConv() {
+        return conv;
+    }
+
+    public void setConv(String conv) {
+        this.conv = conv;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void setFather(String father) {
+        this.father = father;
     }
 
     public String getSex() {
