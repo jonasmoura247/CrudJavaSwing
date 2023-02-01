@@ -41,13 +41,13 @@ public class Persons extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtDateB = new javax.swing.JTextField();
         txtMother = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtCep = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtConv = new javax.swing.JTextField();
         txtFather = new javax.swing.JTextField();
+        txtDateB = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,12 +130,6 @@ public class Persons extends javax.swing.JFrame {
 
         jLabel4.setText("Nome do Pai:");
 
-        txtDateB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDateBActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("CEP:");
 
         txtCep.addActionListener(new java.awt.event.ActionListener() {
@@ -150,6 +144,12 @@ public class Persons extends javax.swing.JFrame {
         });
 
         jLabel6.setText("Convenio");
+
+        try {
+            txtDateB.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -174,10 +174,10 @@ public class Persons extends javax.swing.JFrame {
                                 .addComponent(titleSex)
                                 .addComponent(titleName)
                                 .addComponent(jLabel2)
-                                .addComponent(txtDateB)
                                 .addComponent(jLabel6)
                                 .addComponent(txtConv)
-                                .addComponent(txtFather))
+                                .addComponent(txtFather)
+                                .addComponent(txtDateB))
                             .addGap(625, 625, 625)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -249,9 +249,9 @@ public class Persons extends javax.swing.JFrame {
                 .addComponent(txtFather, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(4, 4, 4)
-                .addComponent(txtDateB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtDateB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtConv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -406,10 +406,6 @@ public class Persons extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btDeleteActionPerformed
 
-    private void txtDateBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateBActionPerformed
-
-    }//GEN-LAST:event_txtDateBActionPerformed
-
     private void txtCepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCepActionPerformed
 
 
@@ -476,7 +472,7 @@ public class Persons extends javax.swing.JFrame {
     private javax.swing.JTextField txtCep;
     private javax.swing.JTextField txtCity;
     private javax.swing.JTextField txtConv;
-    private javax.swing.JTextField txtDateB;
+    private javax.swing.JFormattedTextField txtDateB;
     private javax.swing.JTextField txtDistrict;
     private javax.swing.JTextField txtFather;
     private javax.swing.JTextField txtMother;
