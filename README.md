@@ -1,7 +1,7 @@
 
 # Crud Java Swing
 
-Dados Pessoais.
+Dados Pessoais:
 Nome Completo, Telefone, Sexo, Nome da Mãe, Nome do Pai, Data de Nascimento, Convenio.
 
 Endereço:
